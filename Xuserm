@@ -16,7 +16,7 @@ menu()
 altura=15
 anchura=70
 altura_eleccion=4
-subtitulo="Multifunction para linux v1.0 - © 2021 Yago López Prado"
+subtitulo="Xuserm para linux v1.0 - © 2021 Yago López Prado"
 titulo="Menu"
 menu="Elige una de las siguiente opciones:"
 #Declaramos las diferentes opciones del menu
@@ -127,7 +127,7 @@ case1()
             echo "==============================================="
             notify-send "Error al eliminar el grupo"
         fi;;
-    8)	cat ~/passwd
+    8)	cat /etc/passwd
 	read;;
     $DIALOG_CANCEL)
 	clear
