@@ -1,0 +1,19 @@
+###################################################################
+#Nombre script	:Xuserm
+#Descripcion	:Menú multifunción enfocado a la gestión y administración de usuarios.
+#Lenguaje	:bash/shell
+#info       	:X User Managment para linux v1.0 - © 2021 Yago López Prado
+#Autor		:Yago López Prado
+#Email		:yago2003.lopez@gmail.com
+#Codificación	:_-*Unicode-UTF-8*-_
+###################################################################
+
+Pasos de instalación:
+
+1. Crear una carpeta específica para el instalador de "Xuserm" (Opcional-Recomendado)
+
+2. Darle permisos de ejecución al instalador con "chmod +x INSTALL"
+
+3. Ejecutar el instalador con "./INSTALL"
+
+###################################################################
