@@ -1,0 +1,60 @@
+if [ -f /bin/Xuserm ];
+then
+echo "/bin/Xuserm: Xuserm ya está instalado"
+exit 0
+else
+if [ `whoami` != "root" ]
+then
+echo "Porfavor, ejecute el instalador como root"
+exit 0
+else
+clear
+echo "Desea instalar Xuserm? (S/n)"
+read input
+if [ $input = s ]
+then
+wget https://raw.githubusercontent.com/Perkybeet/Xuserm/main/code
+wget https://raw.githubusercontent.com/Perkybeet/Xuserm/main/LICENSE
+wget https://raw.githubusercontent.com/Perkybeet/Xuserm/main/README
+mv code Xuserm
+rm code.1
+rm LICENSE.1
+clear
+    #Comprueba las dependencias y las instala si no las tiene.
+echo "Comprobando dependencias..."
+echo "=========================="
+finger
+    if [ $? = 0 ]
+    then
+        clear
+    else
+        echo "Instalando dependencias"
+        echo "======================="
+        sudo apt install finger
+        dialog
+        fi
+            if [ $? = 0 ]
+            then
+            clear
+            else
+                sudo apt install dialog
+                echo"Actualizando paquetes..."
+                sudo apt update
+            fi
+            chmod +x Xuserm
+        mv Xuserm /bin
+            if [ $? = 0 ]
+            then
+                echo "===================================="
+                echo "Xuserm se ha instalado correctamente"
+            else
+               clear
+               echo "Error al instalar Xuserm: El archivo o directorio no existe"
+                exit 1
+            fi
+else
+clear
+exit 0
+    fi
+fi
+fi
